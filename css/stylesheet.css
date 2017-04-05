@@ -1,19 +1,251 @@
 @charset "utf-8";
 /* CSS Document */
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+/*****************NAVBAR*******************/
+.nav-home-wrapper {
+	position: relative;
+	height: 100vh;
+}
+nav {
+	z-index: 1;
+}
+
+.navbar {
+	border: none;
+	margin: 0;
+}
+	
+.navbar > div {
+	background-color: rgba(0, 121, 107, 0.9);
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-nav > li > a {
+    color: #fff;
+    text-shadow: none;
+}
+	.navbar .navbar-nav > li > a {
+		font-size: 1.7rem;
+	}
+	.navbar .navbar-nav > li > a:hover,
+	.navbar .navbar-nav > li > a:active,
+	.navbar .navbar-nav > li > a:focus {
+		background-color: transparent;
+		color: #9ddfff;
+	}
+
+.navbar-brand {
+	padding-left: 30px;
+	font-size: 2.3rem;
+	font-weight: 300;
+}
+	.navbar-brand span {
+		font-weight: bold;
+	}
+
+.navbar-toggle .icon-bar {
+	background-color: #fff;
+}
+	.navbar-toggle .icon-bar:hover,
+	.navbar-toggle .icon-bar:active {
+		background-color: #fff;
+	}
 
 /********************HOMEPAGE***************/
 /*Homepage carousel*/
-#home {
+section#home {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100vh;
 }
-#mycoursel {
+#myCarousel {
 	width: 100%;
 	height: 100%;
 }
-.carousel-inner img {
-	width: 100%;
+.carousel-inner {
 	height: 100%;
-	object-position: center;
+	position: relative;
+}
+
+.carousel-inner .item img {
+	width: 100%;
+	height: 100vh;
 	object-fit: cover;
+	object-position: center;
+}
+	.carousel-inner .item::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 150, 136, 0.3);
+	}
+
+.carousel-caption {
+	top: 35%;
+	font-family: 'Ubuntu', sans-serif;
+}
+	.carousel-caption h3{
+		font-size: 3rem;
+		text-shadow: none;
+	}
+
+.carousel-inner .btn {
+	color: #fff;
+	margin-top: 7px;
+	border-radius: 0;
+	background-image: none;
+	background-color: #03a9f4;
+	border: none;
+}
+	.carousel-inner .btn:hover,
+	.carousel-inner .btn:active {
+		background-color: #009688;
+	}
+
+@media only screen and (min-width: 40rem) {
+	.carousel-caption h3{
+		font-size: 5rem;
+	}
+}
+
+/****************GENERAL STYLING FOR OTHER SECTIONS*************/
+.other-sections-wrapper {
+	background-image: url(../photos/header/cs.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+section.info-section {
+	text-align: center;
+	padding: 50px;
+	padding-bottom: 70px;
+	width: 100%;
+}
+	.info-section h1 {
+		font-size: 3rem;
+		font-family: 'Ubuntu', sans-serif;
+		margin-bottom: 30px;
+	}
+	.info-section > p {
+	font-size: 1.5rem;
+	margin: 0 auto;
+	width: 90%;
+	}
+
+/*************MISSION*****************/
+#mission h1 {
+	color: #009688;
+}
+#mission span {
+	color: #03a9f4;
+}
+#mission > p {
+	font-size: 2rem;
+}
+
+/******************PROJECTS*****************/
+#projects {
+	background-color: rgba(0, 150, 136, 0.7);
+}
+#projects h1, #projects > p {
+	color: #fff;
+}
+/****************OUR TEAM*****************/
+#team {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+#team h1 {
+	color: #b2dfdb;
+}
+#getInvolved {
+	background-color: rgba(255, 255, 255, 0.7);
+}
+/***************GET INVOLVED*************/
+#getInvolved h1 {
+	color: #009688;
+}
+#getInvolved form {
+	text-align: left;
+	width: 80%;
+	margin: 0 auto;
+}
+input[type=text] {
+	width: 100%;
+	background-color: transparent;
+	border: 1px solid #808080;
+	margin-bottom: 5px;
+}
+input[type=submit] {
+	background-color: #009688;
+	border: none;
+	color: #fff;
+	font-size: 1.2rem;
+	padding: 5px 10px 5px 10px;
+}
+/**************CONTACT***********/
+#contact {
+	background-color: rgba(0, 150, 136, 0.7);
+	text-align: left;
+	padding-left: 30px;
+}
+#contact h1 {
+	color: #fff;
+	margin-left: 0;
+}
+#contact > p {
+	font-size: 2.5rem;
+	color: #fff;
+	margin-left: 0;
+}
+footer {
+	height: 25px;
+	padding: 3px 0 3px 0;
+	text-align: center;
+	background-color: rgba(64, 64, 64, 0.8);
+	color: #bfbfbf;
+	font-size: 1.2rem;
+}
+/*big viewports*/
+@media only screen and (min-width: 40rem) {
+	.info-section h1 {
+		font-size: 4rem;
+	}
+	.info-section > p {
+		font-size: 2rem;
+		width: 60%;
+	}
+	#mission > p {
+		font-size: 2.7rem;
+	}
+	#getInvolved form {
+		width: 60%;
+	}
+	input[type=text] {
+		height: 30px;
+		margin-bottom: 10px;
+	}
+	#contact {
+		padding-left: 200px;
+	}
+	#contact p {
+		font-size: 3rem;
+	}
+}
+
+@media only screen and (min-width: 70rem) {
+	#getInvolved form {
+		width: 40%;
+	}
 }

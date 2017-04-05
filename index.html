@@ -4,22 +4,24 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Ubuntu:300" rel="stylesheet">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/script.js"></script>
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-  <title>HU Swipe</title>
+  <title>HUSwipes</title>
 </head>
 
 <body>
+<div class="nav-home-wrapper">
   <!-- *************NAVBAR************** -->
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-fixed-top">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -29,22 +31,23 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">HUSwipe</a>
+        <a class="navbar-brand" href="#">HUSWIPES</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Mission</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Our board</a></li>
-          <li><a href="#">Get involved</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#team">Our team</a></li>
+          <li><a href="#getInvolved">Get involved</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
+  <!-- *************HOME************* -->
   <section id="home">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
@@ -58,16 +61,29 @@
       <div class="carousel-inner" role="listbox">
         <div class="item active">
           <img src="photos/header/cs.jpg" alt="Current Projects">
+          <div class="carousel-caption">
+            <h3>SWIPE OUT HUNGER</h3>
+            <a href="#mission" class="btn" role="button">Learn more</a>
+          </div>
         </div>
 
         <div class="item">
           <img src="photos/header/community_service4.jpg" alt="HUSwipe">
+          <div class="carousel-caption">
+            <h3>RECENT PROJECTS</h3>
+            <a href="#projects" class="btn" role="button">More details</a>
+          </div>
         </div>
 
         <div class="item">
           <img src="photos/header/pexels-photo-280121.jpeg" alt="Get Involed">
+          <div class="carousel-caption">
+            <h3>VOLUNTEER WITH US</h3>
+            <a href="#getInvolved" class="btn" role="button">Get involved</a>
+          </div>
         </div>
       </div> <!-- slides wrapper -->
+
 
       <!-- Left and right controls -->
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -80,7 +96,47 @@
       </a>
     </div>
   </section>
-  
- 	
+  </div>
+  <!-- ******************* MISSION SECTION ******************-->
+ 	<section id="mission" class="info-section">
+    <h1>MISSION</h1>
+    <p><span>Swipe Out Hunger (HUSwipes)</span> is a nonprofit organization at Howard University dedicated to swiping out hunger in Washington, DC.</p>
+  </section>
+  <!-- ********************** PROJECTS ********************** -->
+  <div class="other-sections-wrapper">
+  <section id="projects" class="info-section">
+    <h1>PROJECTS</h1>
+    <p>Currently, we hope to create a systematic process in which students could donate their Dining Dollars and meal swipes in order to alleviate the hunger of food insecure students at Howard University and the homelessness in Washington D.C. Taking on a healthy-eating initiative, HU Swipes also hopes to incorporate more vegan and vegetarian friendly dishes in the cafeterias. In addition to these goals, we volunteer at soup kitchens, such as So Others Might Eat (SOME), to prepare hot meals for the homeless. In these endeavors, we ask for Howard students to join.</p>
+  </section>
+  <section id="team" class="info-section">
+    <h1>OUR TEAM</h1>
+  </section>
+  <section id="getInvolved" class="info-section">
+    <h1>GET INVOLVED</h1>
+    <form action="/action_page.php">
+    Name<br>
+    <input type="text" name="firstname">
+    <br>
+    HU ID (if applicable)<br>
+    <input type="text" name="huid">
+    <br>
+    Email<br>
+    <input type="text" name="email">
+    <br>
+    Phone number<br>
+    <input type="text" name="number">
+    <br><br>
+    <input type="submit" value="Submit">
+  </form> 
+  </section>
+  <section id="contact" class="info-section">
+    <h1>CONTACT</h1>
+    <p>huswipes@gmail.com</p>
+    <p>@HUSwipes</p>
+  </section>
+  <footer>
+    <p>Copyright &copy; <span id="year"></span> Thi Nguyen</p>
+  </footer>
+  </div> <!-- other sections wrapper -->
 </body>
 </html>
