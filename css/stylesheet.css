@@ -102,7 +102,6 @@ section#home {
 
 .carousel-inner .btn {
 	color: #fff;
-	margin-top: 7px;
 	border-radius: 0;
 	background-image: none;
 	background-color: #03a9f4;
@@ -165,12 +164,34 @@ section.info-section {
 /****************OUR TEAM*****************/
 #team {
 	background-color: rgba(0, 0, 0, 0.7);
+	color: #fff;
 }
 #team h1 {
 	color: #b2dfdb;
 }
 #getInvolved {
 	background-color: rgba(255, 255, 255, 0.7);
+}
+div.board-photo {
+	padding-bottom: 30px;
+}
+.board-photo img{
+	width: 70%;
+	border-radius: 100%;
+}
+.member {
+	text-align: left;
+	padding-right: 0;
+	padding-left: 0;
+}
+.member h3 {
+	font-size: 1.25rem;
+	color: #03a9f4;
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+.member p {
+	font-size: 1rem;
 }
 /***************GET INVOLVED*************/
 #getInvolved h1 {
@@ -219,13 +240,14 @@ footer {
 }
 /*big viewports*/
 @media only screen and (min-width: 40rem) {
+	section.info-section {
+		padding-top: 80px;
+		padding-bottom: 100px;
+	}
 	.info-section h1 {
 		font-size: 4rem;
 	}
-	.info-section > p {
-		font-size: 2rem;
-		width: 60%;
-	}
+	
 	#mission > p {
 		font-size: 2.7rem;
 	}
@@ -242,10 +264,45 @@ footer {
 	#contact p {
 		font-size: 3rem;
 	}
+	div.board-photo {
+		padding-bottom: 50px;
+	}
+	div.member {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	#team h1 {
+		margin-bottom: 80px;
+	}
+	.member h3 {
+		font-size: 2rem;
+	}
+	.member p {
+		font-size: 1.25rem;
+	}
+}
+
+
+@media only screen and (min-width: 768px) {
+	.member {
+		text-align: center;
+	}
+	div.board-photo {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
 }
 
 @media only screen and (min-width: 70rem) {
 	#getInvolved form {
 		width: 40%;
+	}
+	.info-section > p {
+		font-size: 2rem;
+		width: 60%;
+	}
+	#team {
+		padding-right: 200px;
+		padding-left: 200px;
 	}
 }
